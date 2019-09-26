@@ -21,6 +21,7 @@
 #endif
 
 #include "fq_nmod.h"
+#include "fq_nmod_poly.h"
 
 #define T fq_nmod
 #define B nmod

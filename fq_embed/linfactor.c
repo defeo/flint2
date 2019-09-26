@@ -1,5 +1,9 @@
 /*
-    Copyright (C) 2017 Luca De Feo
+    Copyright (C) 2007 David Howden
+    Copyright (C) 2007, 2008, 2009, 2010 William Hart
+    Copyright (C) 2008 Richard Howell-Peak
+    Copyright (C) 2011 Fredrik Johansson
+    Copyright (C) 2013 Mike Hansen
 
     This file is part of FLINT.
 
@@ -9,19 +13,14 @@
     (at your option) any later version.  See <http://www.gnu.org/licenses/>.
 */
 
-#include "fq_zech_embed.h"
+#include "fq_embed.h"
 
 #ifdef T
 #undef T
 #endif
-#ifdef B
-#undef B
-#endif
 
-#define T fq_zech
-#define CAP_T FQ_ZECH
-#define B nmod
-#include "fq_embed_templates/embed.c"
-#undef B
+#define T fq
+#define CAP_T FQ
+#include "fq_embed_templates/linfactor.c"
 #undef CAP_T
 #undef T

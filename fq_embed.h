@@ -22,6 +22,7 @@
 
 #include "fq.h"
 #include "fmpz_mod_mat.h"
+#include "fq_poly.h"
 
 #define T fq
 #define B fmpz_mod

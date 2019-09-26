@@ -1,5 +1,6 @@
 /*
-    Copyright (C) 2017 Luca De Feo
+    Copyright (C) 2009 William Hart
+    Copyright (C) 2015 Tommy Hofmann
 
     This file is part of FLINT.
 
@@ -9,19 +10,12 @@
     (at your option) any later version.  See <http://www.gnu.org/licenses/>.
 */
 
-#include "fq_zech_embed.h"
+#define FMPZ_MOD_MAT_INLINES_C
 
-#ifdef T
-#undef T
-#endif
-#ifdef B
-#undef B
-#endif
-
-#define T fq_zech
-#define CAP_T FQ_ZECH
-#define B nmod
-#include "fq_embed_templates/embed.c"
-#undef B
-#undef CAP_T
-#undef T
+#define ulong ulongxx /* interferes with system includes */
+#include <stdlib.h>
+#undef ulong
+#include <gmp.h>
+#include "flint.h"
+#include "ulong_extras.h"
+#include "fmpz_mod_mat.h"

@@ -22,6 +22,7 @@
 
 #include "fq_zech.h"
 #include "fq_nmod_embed.h"
+#include "fq_zech_poly.h"
 
 #define T fq_zech
 #define B nmod

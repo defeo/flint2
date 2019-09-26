@@ -97,6 +97,12 @@ void TEMPLATE(T, modulus_pow_series_inv)(TEMPLATE(B, poly_t) res,
     TEMPLATE(B, poly_inv_series)(res, res, trunc);
 }
 
+/* Compute a linear factor of a splitting polynomial */
+
+FLINT_DLL void TEMPLATE(T, poly_linfactor)(TEMPLATE(T, poly_t) linfactor,
+                                           const TEMPLATE(T, poly_t) input,
+                                           const TEMPLATE(T, ctx_t) ctx);
+
 #ifdef __cplusplus
 }
 #endif
